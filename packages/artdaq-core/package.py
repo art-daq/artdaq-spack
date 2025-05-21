@@ -45,6 +45,7 @@ class ArtdaqCore(CMakePackage):
     version("v3_09_07", commit="23348fa245e46096c9b7a8fc81b553850a2a64ea")
     version("v3_09_04", commit="d15bf64341f4576ab475d5a151ac22894d2ee363")
     version("develop", branch="develop", get_full_repo=True)
+    version("v4_02_00", commit="49c4220914a9c46745e3a387a8163438db473a81")
 
     variant(
         "cxxstd",

@@ -26,6 +26,7 @@ class ArtdaqDaqinterface(CMakePackage):
         return url.format(version)
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v4_01_00", commit="0f0cc2e2f98551c1948c19afd542e8e875b3df6e")
     version("v4_00_00", commit="578923aa70322fcfc2906f85e9110d7ba573998e")
     version("v3_16_00", commit="b134b71dda67b747d071e694fc021c2d8461b1ce")
     version("v3_15_00", commit="ceb0f3c8c67b9f2042dbff8d3a804fad91bfab90")
