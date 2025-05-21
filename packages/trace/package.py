@@ -53,6 +53,7 @@ class Trace(CMakePackage):
         if generator.endswith("Ninja"):
             depends_on("ninja@1.10:", type="build")
 
+    depends_on("cxx", type="build")
     variant("kmod", default=False, description="Create Linux kernel module")
     variant("mf", default=False, description="Compile MessageFacility library")
 

@@ -57,6 +57,7 @@ class OtsdaqComponents(CMakePackage):
         description="Use the specified C++ standard when building.",
         when="@v2_06_10:"
     )
+    depends_on("cxx", type="build")
 
     depends_on("cetmodules@3.26.00:", type="build")
 

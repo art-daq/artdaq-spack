@@ -67,6 +67,7 @@ class Artdaq(CMakePackage):
         description="Use the specified C++ standard when building.",
         when="@v3_12_04:"
     )
+    depends_on("cxx", type="build")
 
     depends_on("art-root-io cxxstd=17", when="cxxstd=17")
     depends_on("art-root-io cxxstd=20", when="cxxstd=20")
