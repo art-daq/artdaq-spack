@@ -66,6 +66,7 @@ class ArtdaqCore(CMakePackage):
         description="Use the specified C++ standard when building.",
         when="@v3_09_12:"
     )
+    depends_on("c", type="build")
     depends_on("cxx", type="build")
 
     variant("doc", default=False, description="Build documentation with Doxygen.")
