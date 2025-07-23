@@ -48,6 +48,8 @@ class Xdaq(MakefilePackage):
 
     conflicts("%gcc@13.1.0", when="@:16_31_0_3")
 
+    depends_on("c", type="build")
+    depends_on("cxx", type="build")
     depends_on("autoconf", type="build")
     depends_on("automake", type="build")
     depends_on("libtool", type="build")

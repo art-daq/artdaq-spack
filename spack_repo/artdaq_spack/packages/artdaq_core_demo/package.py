@@ -60,6 +60,7 @@ class ArtdaqCoreDemo(CMakePackage):
         description="Use the specified C++ standard when building.",
         when="@v1_10_04:"
     )
+    depends_on("c", type="build")
     depends_on("cxx", type="build")
 
     depends_on("cetmodules@3.26.00:", type="build")

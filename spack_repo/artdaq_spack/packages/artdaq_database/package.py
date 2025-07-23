@@ -54,6 +54,7 @@ class ArtdaqDatabase(CMakePackage):
         description="Use the specified C++ standard when building.",
         when="@v1_07_04:"
     )
+    depends_on("c", type="build")
     depends_on("cxx", type="build")
     variant("builtin_fhicl", default=True, description="Use built-in FHiCL-cpp with database fixes")
 
