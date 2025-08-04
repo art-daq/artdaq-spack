@@ -37,7 +37,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.15.00 cxxstd=20")
         depends_on("art-root-io@1.14.00 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.17.00 cxxstd=20")
         depends_on("canvas-root-io@1.14.00 cxxstd=20", when="+root")
         depends_on("catch2@3.3.2")
@@ -67,7 +67,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.14.04 cxxstd=20")
         depends_on("art-root-io@1.13.06 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.16.04 cxxstd=20")
         depends_on("canvas-root-io@1.13.06 cxxstd=20", when="+root")
         depends_on("catch2@3.3.2")
@@ -97,7 +97,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.14.04 cxxstd=20")
         depends_on("art-root-io@1.13.05 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.16.04 cxxstd=20")
         depends_on("canvas-root-io@1.13.05 cxxstd=20", when="+root")
         depends_on("catch2@3.3.2")
@@ -127,7 +127,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.14.03 cxxstd=20")
         depends_on("art-root-io@1.13.03 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.16.03 cxxstd=20")
         depends_on("canvas-root-io@1.13.03 cxxstd=20", when="+root")
         depends_on("catch2@3.3.2")
@@ -157,7 +157,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.14.01 cxxstd=20")
         depends_on("art-root-io@1.13.01 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.16.01 cxxstd=20")
         depends_on("canvas-root-io@1.13.01 cxxstd=20", when="+root")
         depends_on("catch2@3.3.2")
@@ -187,7 +187,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.13.02 cxxstd=17")
         depends_on("art-root-io@1.12.03 cxxstd=17", when="+root")
-        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.15.01 cxxstd=17")
         depends_on("canvas-root-io@1.12.02 cxxstd=17", when="+root")
         depends_on("catch2@3.3.1")
@@ -217,7 +217,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.13.01 cxxstd=17")
         depends_on("art-root-io@1.12.03 cxxstd=17", when="+root")
-        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.15.01 cxxstd=17")
         depends_on("canvas-root-io@1.12.02 cxxstd=17", when="+root")
         depends_on("catch2@3.3.1")
@@ -247,7 +247,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.13.01 cxxstd=17")
         depends_on("art-root-io@1.12.02 cxxstd=17", when="+root")
-        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.81.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.15.01 cxxstd=17")
         depends_on("canvas-root-io@1.12.01 cxxstd=17", when="+root")
         depends_on("catch2@3.3.1")
@@ -275,7 +275,7 @@ class ArtSuite(BundlePackage):
     with when("@s120b"):
         depends_on("art@3.12.01 cxxstd=17")
         depends_on("art-root-io@1.11.04 cxxstd=17", when="+root")
-        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.14.01 cxxstd=17")
         depends_on("canvas-root-io@1.11.03 cxxstd=17", when="+root")
         depends_on("catch2@3.3.1") # 2.13.9 in manifest, but art package has conflicts at 2.12
@@ -303,7 +303,7 @@ class ArtSuite(BundlePackage):
     with when("@s120a"):
         depends_on("art@3.12.00 cxxstd=17")
         depends_on("art-root-io@1.11.03 cxxstd=17", when="+root")
-        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.14.00 cxxstd=17")
         depends_on("canvas-root-io@1.11.02 cxxstd=17", when="+root")
         depends_on("catch2@2.13.9")
@@ -331,7 +331,7 @@ class ArtSuite(BundlePackage):
 #    with when("@s120"):
 #        depends_on("art@3.12.00 cxxstd=17")
 #        depends_on("art-root-io@1.11.02 cxxstd=17", when="+root")
-#        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+#        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
 #        depends_on("canvas@3.14.00 cxxstd=17")
 #        depends_on("canvas-root-io@1.11.01 cxxstd=17", when="+root")
 #        depends_on("catch2@2.13.9")
@@ -359,7 +359,7 @@ class ArtSuite(BundlePackage):
     with when("@s118"):
         depends_on("art@3.12.00 cxxstd=17")
         depends_on("art-root-io@1.11.00 cxxstd=17", when="+root")
-        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.14.00 cxxstd=17")
         depends_on("canvas-root-io@1.11.00 cxxstd=17", when="+root")
         depends_on("catch2@2.13.8 ")
@@ -387,7 +387,7 @@ class ArtSuite(BundlePackage):
     with when("@s117"):
         depends_on("art@3.09.04 cxxstd=17")
         depends_on("art-root-io@1.08.05 cxxstd=17", when="+root")
-        depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.12.05 cxxstd=17")
         depends_on("canvas-root-io@1.09.05 cxxstd=17", when="+root")
         depends_on("catch2@2.13.4")
@@ -417,7 +417,7 @@ class ArtSuite(BundlePackage):
     with when("@s112"):
         depends_on("art@3.09.03 cxxstd=17")
         depends_on("art-root-io@1.08.03 cxxstd=17", when="+root")
-        depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
+        depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.12.04 cxxstd=17")
         depends_on("canvas-root-io@1.09.04 cxxstd=17", when="+root")
         depends_on("catch2@2.13.4")
