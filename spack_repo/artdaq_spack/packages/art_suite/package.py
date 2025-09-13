@@ -15,6 +15,7 @@ class ArtSuite(BundlePackage):
 
     homepage="https://github.com/art-framework-suite/"
 
+    variant("bundle", default=True, description="specify particular versions by version")
     version("s132")
     version("s131")
     version("s130")
@@ -32,7 +33,37 @@ class ArtSuite(BundlePackage):
 
     variant("root", default=True, description="Also bring in the ROOT IO packages")
 
-    with when("@s132"):
+    with when("~bundle"):
+        depends_on("cmake")
+
+        depends_on("art ")
+        depends_on("art-root-io ", when="+root")
+        depends_on("boost+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+system+test+thread+timer+wave") # Sum of all needed libraries...
+        depends_on("canvas ")
+        depends_on("canvas-root-io ", when="+root")
+        depends_on("catch2")
+        depends_on("cetlib ")
+        depends_on("cetlib-except ")
+        depends_on("cetmodules")
+        depends_on("clhep")
+        depends_on("fftw")
+        depends_on("fhicl-cpp ")
+        depends_on("gsl")
+        depends_on("hep-concurrency ")
+        depends_on("libxml2")
+        depends_on("messagefacility ")
+        depends_on("py-numpy")
+        depends_on("openblas")
+        depends_on("postgresql") # 15.3 not published to Spack
+        depends_on("py-pybind11")
+        depends_on("pythia6")
+        depends_on("python")
+        depends_on("range-v3")
+        depends_on("root +http+mlp+root7+spectrum+tmva+tmva-sofie ", when="+root")
+        depends_on("sqlite")
+        depends_on("tbb")
+        depends_on("xrootd")
+    with when("@s132 +bundle"):
         depends_on("cmake@3.27.9:")
 
         depends_on("art@3.15.00 cxxstd=20")
@@ -62,7 +93,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
-    with when("@s131"):
+    with when("@s131 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.14.04 cxxstd=20")
@@ -92,7 +123,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
-    with when("@s130"):
+    with when("@s130 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.14.04 cxxstd=20")
@@ -122,7 +153,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
-    with when("@s128"):
+    with when("@s128 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.14.03 cxxstd=20")
@@ -152,7 +183,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
-    with when("@s126"):
+    with when("@s126 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.14.01 cxxstd=20")
@@ -182,7 +213,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
-    with when("@s124"):
+    with when("@s124 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.13.02 cxxstd=17")
@@ -212,7 +243,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.8.0 cxxstd=17")
         depends_on("xrootd@5.5.3 cxxstd=17")
-    with when("@s123"):
+    with when("@s123 +bundle"):
         depends_on("cmake@3.27.9")
 
         depends_on("art@3.13.01 cxxstd=17")
@@ -242,7 +273,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.8.0 cxxstd=17")
         depends_on("xrootd@5.5.3 cxxstd=17")
-    with when("@s122"):
+    with when("@s122 +bundle"):
         depends_on("cmake@3.26.2")
 
         depends_on("art@3.13.01 cxxstd=17")
@@ -272,7 +303,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.8.0 cxxstd=17")
         depends_on("xrootd@5.5.1 cxxstd=17")
-    with when("@s120b"):
+    with when("@s120b +bundle"):
         depends_on("art@3.12.01 cxxstd=17")
         depends_on("art-root-io@1.11.04 cxxstd=17", when="+root")
         depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
@@ -300,7 +331,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.39.2")
         depends_on("tbb@2021.7.0 cxxstd=17")
         depends_on("xrootd@5.4.3 cxxstd=17")
-    with when("@s120a"):
+    with when("@s120a +bundle"):
         depends_on("art@3.12.00 cxxstd=17")
         depends_on("art-root-io@1.11.03 cxxstd=17", when="+root")
         depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
@@ -328,7 +359,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.39.2")
         depends_on("tbb@2021.7.0 cxxstd=17")
         depends_on("xrootd@5.4.3 cxxstd=17")
-#    with when("@s120"):
+#    with when("@s120 +bundle"):
 #        depends_on("art@3.12.00 cxxstd=17")
 #        depends_on("art-root-io@1.11.02 cxxstd=17", when="+root")
 #        depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
@@ -356,7 +387,7 @@ class ArtSuite(BundlePackage):
 #        depends_on("sqlite@3.39.2")
 #        depends_on("tbb@2021.7.0 cxxstd=17")
 #        depends_on("xrootd@5.4.3 cxxstd=17")
-    with when("@s118"):
+    with when("@s118 +bundle"):
         depends_on("art@3.12.00 cxxstd=17")
         depends_on("art-root-io@1.11.00 cxxstd=17", when="+root")
         depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
@@ -384,7 +415,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.39.2")
         depends_on("tbb@2021.7.0 cxxstd=17")
         depends_on("xrootd@5.4.3 cxxstd=17")
-    with when("@s117"):
+    with when("@s117 +bundle"):
         depends_on("art@3.09.04 cxxstd=17")
         depends_on("art-root-io@1.08.05 cxxstd=17", when="+root")
         depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
@@ -414,7 +445,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite@3.34.0")
         depends_on("tbb@2021.1.1 cxxstd=17")
         depends_on("xrootd@5.1.0 cxxstd=17")
-    with when("@s112"):
+    with when("@s112 +bundle"):
         depends_on("art@3.09.03 cxxstd=17")
         depends_on("art-root-io@1.08.03 cxxstd=17", when="+root")
         depends_on("boost@1.75.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
