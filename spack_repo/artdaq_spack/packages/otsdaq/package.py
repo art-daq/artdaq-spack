@@ -28,6 +28,7 @@ class Otsdaq(CMakePackage):
     git = "https://github.com/art-daq/otsdaq.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v3_03_00", commit="13c7f6db2566ff569540ef1f803b9e76b92493a6")
     version("v3_02_00", commit="6c2518b75e6909ebd9739b444666b1833e246edc")
     version("v3_01_00", commit="d82822db1da643907cc049803dbd7fa3c034c370")
     version("v3_00_00", commit="9aa0eb11ac827f4d9b1bdc3d08fbb8edd1f14fcb")
@@ -72,6 +73,7 @@ class Otsdaq(CMakePackage):
     depends_on("cetmodules@3.26.00:", type="build")
     depends_on("xdaq")
     depends_on("reredirect", when="@v2_09_00:")
+    depends_on("py-rich-click", when="@v3:")
 
     depends_on("artdaq@:v3_99_00", when="@:v2_99_00")
     depends_on("artdaq@v4_00_00:,develop", when="@v3_00_00:,develop")

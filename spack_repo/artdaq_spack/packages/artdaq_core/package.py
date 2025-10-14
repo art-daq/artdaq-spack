@@ -27,6 +27,9 @@ class ArtdaqCore(CMakePackage):
     url = "https://github.com/art-daq/artdaq-core/archive/refs/tags/v3_09_04.tar.gz"
     git = "https://github.com/art-daq/artdaq-core.git"
 
+    version("develop", branch="develop", get_full_repo=True)
+    version("v4_03_00", commit="5f18a19a36c85aeb4c05ad29b8421e96497b4531")
+    version("v4_02_00", commit="49c4220914a9c46745e3a387a8163438db473a81")
     version("v4_01_00", commit="fe45771437e086f2b6ca85c01237b426c1b3f09e")
     version("v4_00_00", commit="12d6d49e14e50b009ffde0329f936ed00d22fe0e")
     version("v3_13_00", commit="75fb6a28438ff4a9a74dc9128c5bc05b11ae97f4")
@@ -45,8 +48,6 @@ class ArtdaqCore(CMakePackage):
     version("v3_09_08", commit="9f04cacde9be1e327e79fa401d5f504c6cd23e4c")
     version("v3_09_07", commit="23348fa245e46096c9b7a8fc81b553850a2a64ea")
     version("v3_09_04", commit="d15bf64341f4576ab475d5a151ac22894d2ee363")
-    version("develop", branch="develop", get_full_repo=True)
-    version("v4_02_00", commit="49c4220914a9c46745e3a387a8163438db473a81")
 
     variant(
         "cxxstd",
