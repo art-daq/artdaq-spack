@@ -7,7 +7,6 @@
 import os
 import sys
 from spack.util.environment import EnvironmentModifications
-from llnl.util.filesystem import join_path
 
 from spack_repo.builtin.build_systems.cmake import CMakePackage
 from spack.package import *
