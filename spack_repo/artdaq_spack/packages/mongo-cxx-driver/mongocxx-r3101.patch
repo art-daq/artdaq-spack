@@ -1,0 +1,14 @@
+diff --git a/src/mongocxx/lib/mongocxx/v_noabi/mongocxx/bulk_write.cpp b/src/mongocxx/lib/mongocxx/v_noabi/mongocxx/bulk_write.cpp
+index 99f52a597b..cfb22cf27c 100644
+--- a/src/mongocxx/lib/mongocxx/v_noabi/mongocxx/bulk_write.cpp
++++ b/src/mongocxx/lib/mongocxx/v_noabi/mongocxx/bulk_write.cpp
+@@ -69,6 +69,9 @@ bulk_write& bulk_write::append(const model::write& operation) {
+             if (const auto array_filters = operation.get_update_one().array_filters()) {
+                 options_builder.append(kvp("arrayFilters", *array_filters));
+             }
++           //GAL,ELF:BEGIN Allow "." (dots) in keys
++            options_builder.append(kvp("validate", (BSON_VALIDATE_UTF8 | BSON_VALIDATE_DOLLAR_KEYS | BSON_VALIDATE_UTF8_ALLOW_NULL | BSON_VALIDATE_EMPTY_KEYS)));
++           //GAL,ELF:END Allow "." (dots) in keys
+             scoped_bson_t options(options_builder.extract());
+
+             bson_error_t error;

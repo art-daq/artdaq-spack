@@ -23,6 +23,7 @@ class ArtdaqDatabase(CMakePackage):
     git = "https://github.com/art-daq/artdaq-database.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v3_00_00", commit="43c21bc9c3b6abc3a4d2a3ce8aaa71ff655b9e5c")
     version("v2_00_00", commit="866afa9b6518136994fba5425bc3d819ee118940")
     version("v1_10_02", commit="2e92a4357c9b4a7dbe2259a8d6dcf9b1dc39d582")
     version("v1_10_01", commit="43e8e3a4f0327f0bb6c381b75037eb51fa5719fd")
@@ -56,7 +57,6 @@ class ArtdaqDatabase(CMakePackage):
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")
-    variant("builtin_fhicl", default=True, description="Use built-in FHiCL-cpp with database fixes")
 
     depends_on("curl")
     depends_on("boost+filesystem+program_options")
@@ -64,14 +64,18 @@ class ArtdaqDatabase(CMakePackage):
     depends_on("node-js", type="build", when="@:v1_07_05")
     depends_on("python", type="build")
     depends_on("art-suite")
+    depends_on("fhicl-cpp+db")
 
+    depends_on("mongo-cxx-driver+dots_in_keys", type="build")
     depends_on("cetmodules@3.26.00:", type="build")
 
     depends_on("cetlib", when="~builtin_fhicl")
 
     depends_on("trace+mf")
 
+    variant("builtin_fhicl", default=False)
+
     def cmake_args(self):
-        args = [self.define_from_variant("CMAKE_CXX_STANDARD", "cxxstd"),
-                "-DUSE_FHICLCPP={0}".format("TRUE" if "+builtin_fhicl" in self.spec else "FALSE")]
+        args = [self.define_from_variant("CMAKE_CXX_STANDARD", "cxxstd")
+                ]
         return args
