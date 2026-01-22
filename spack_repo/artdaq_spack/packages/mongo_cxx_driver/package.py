@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
 
+from spack_repo.builtin.build_systems.cmake import CMakePackage
 from spack.package import *
 
 
@@ -37,6 +38,7 @@ class MongoCxxDriver(CMakePackage):
     version("3.2.0", sha256="e26edd44cf20bd6be91907403b6d63a065ce95df4c61565770147a46716aad8c")
 
     depends_on("cxx", type="build")  # generated
+    depends_on("c", type="build")  # generated
 
     depends_on("mongo-c-driver@1.9.2:")
 

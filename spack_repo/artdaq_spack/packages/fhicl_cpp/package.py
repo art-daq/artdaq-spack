@@ -5,8 +5,9 @@
 
 import os
 
+from spack_repo.builtin.build_systems.cmake import CMakePackage
 from spack.package import *
-from spack.pkg.fnal_art.fnal_github_package import *
+from spack_repo.fnal_art.packages.fnal_github_package.package import *
 
 
 class FhiclCpp(CMakePackage, FnalGithubPackage):
@@ -19,7 +20,7 @@ class FhiclCpp(CMakePackage, FnalGithubPackage):
 
     version_patterns = ["v4_15_03"]
 
-    version("4.19.01", sha256="93ded157a40a45601095a5c5627337ac2ad35f76d08714d28ad2e05bc292f4e5")
+    version("4.19.02", sha256="62a2fa69da52f3d5f00305de00b5c64d0cfd7ba3714cbfc0f016be1e6b82338a")
     version("4.19.00", sha256="25163d17a9a6c8509d326785a78e399fdc33e231ad393edc0ae34b1d9b56b9f9")
     version("4.18.04", sha256="d0b8beca890707d0bbf35678c3b6bddd1b02b3ab7654801abbe31525dacdd7b5")
     version("4.18.03", sha256="c08fd6ce37225e58d3d893f9205b321ae2fff2d8b5c96c2e22ac24708a4309af")
@@ -33,6 +34,8 @@ class FhiclCpp(CMakePackage, FnalGithubPackage):
     cxxstd_variant("17", "20", "23", default="17", sticky=True)
     conflicts("cxxstd=17", when="@4.19.00:")
 
+    depends_on("cxx", type="build")
+    depends_on("c", when="@:4.19.02", type="build")
     depends_on("boost@:1.82", when="@:4.19")
     depends_on("boost+program_options+test")
     depends_on("cetlib")
