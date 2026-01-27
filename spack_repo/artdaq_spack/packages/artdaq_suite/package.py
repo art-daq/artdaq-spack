@@ -34,10 +34,10 @@ class ArtdaqSuite(BundlePackage):
     version("v3_12_03")
     version("v3_12_02")
 
-    squals = ("112", "117", "118", "120", "120a", "120b", "122", "123", "124", "126", "128", "130", "131", "132")
+    squals = ("112", "117", "118", "120", "120a", "120b", "122", "123", "124", "126", "128", "130", "131", "132", "132.1")
     variant(
         "s",
-        default="132",
+        default="132.1",
         values=("0",) + squals,
         multi=False,
         description="Art suite version to use",

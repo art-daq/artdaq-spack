@@ -16,6 +16,8 @@ class ArtSuite(BundlePackage):
     homepage="https://github.com/art-framework-suite/"
 
     variant("bundle", default=True, description="specify particular versions by version")
+
+    version("s132.1")
     version("s132")
     version("s131")
     version("s130")
@@ -63,6 +65,36 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite")
         depends_on("tbb")
         depends_on("xrootd")
+    with when("@s132.1 +bundle"):
+        depends_on("cmake@3.30.5:")
+
+        depends_on("art@3.15.00 cxxstd=20")
+        depends_on("art-root-io@1.14.00 cxxstd=20", when="+root")
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("canvas@3.17.00 cxxstd=20")
+        depends_on("canvas-root-io@1.14.00 cxxstd=20", when="+root")
+        depends_on("catch2@3.7.1")
+        depends_on("cetlib@3.19.00 cxxstd=20")
+        depends_on("cetlib-except@1.10.00 cxxstd=20")
+        depends_on("cetmodules@3.25.00:")
+        depends_on("clhep@2.4.7.1")
+        depends_on("fftw@3.3.10")
+        depends_on("fhicl-cpp@4.19.00 cxxstd=20")
+        depends_on("gsl@2.8")
+        depends_on("hep-concurrency@1.10.00 cxxstd=20")
+        depends_on("libxml2@2.9.13")
+        depends_on("messagefacility@2.11.00 cxxstd=20")
+        depends_on("py-numpy@2.1.2")
+        depends_on("openblas@0.3.28")
+        depends_on("postgresql@16.4")
+        depends_on("py-pybind11@2.13.5")
+        # depends_on("pythia6@6.4.28")
+        depends_on("python@3.10.14")
+        depends_on("range-v3@0.12.0")
+        depends_on("root@6.32.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20", when="+root")
+        depends_on("sqlite@3.46.0")
+        depends_on("tbb@2022.0.0")
+        depends_on("xrootd@5.7.1")
     with when("@s132 +bundle"):
         depends_on("cmake@3.27.9:")
 
