@@ -101,7 +101,7 @@ class OtsdaqSuite(BundlePackage):
         depends_on("libpqxx")
         depends_on("xdaq")
         depends_on("reredirect")
-    with when("@v3_04_02"):
+    with when("@v3_05_00"):
         depends_on("otsdaq@v3_05_00")
         depends_on("otsdaq-utilities@v3_04_00")
         depends_on("otsdaq-components@v3_03_00")
