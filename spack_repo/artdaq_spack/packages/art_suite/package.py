@@ -17,7 +17,7 @@ class ArtSuite(BundlePackage):
 
     variant("bundle", default=True, description="specify particular versions by version")
 
-    version("s132.1")
+    version("s133")
     version("s132")
     version("s131")
     version("s130")
@@ -65,7 +65,7 @@ class ArtSuite(BundlePackage):
         depends_on("sqlite")
         depends_on("tbb")
         depends_on("xrootd")
-    with when("@s132.1 +bundle"):
+    with when("@s133 +bundle"):
         depends_on("cmake@3.30.5:")
 
         depends_on("art@3.15.00 cxxstd=20")
