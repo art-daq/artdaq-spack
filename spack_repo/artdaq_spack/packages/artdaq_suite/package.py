@@ -15,6 +15,7 @@ class ArtdaqSuite(BundlePackage):
     homepage="https://github.com/art-daq"
 
     version("develop")
+    version("v4_05_00")
     version("v4_04_01")
     version("v4_04_00")
     version("v4_03_01")
@@ -70,6 +71,25 @@ class ArtdaqSuite(BundlePackage):
         depends_on("qt +gui+shared")
         depends_on("librdkafka")
         depends_on("epics-base", when="+epics")
+    with when("@v4_05_00"):
+        depends_on("trace@v3_21_00")
+        depends_on("artdaq-core@v5_00_00")
+        depends_on("artdaq-utilities@v2_02_00")
+        depends_on("artdaq-mfextensions@v2_02_00")
+        depends_on("artdaq@v4_05_00")
+        depends_on("artdaq-epics-plugin@v2_01_00", when="+epics")
+        depends_on("artdaq-daqinterface@v4_04_00")
+        depends_on("artdaq-core-demo@v2_03_00", when="+demo")
+        depends_on("artdaq-database@v3_01_00", when="+db")
+        depends_on("artdaq-demo@v4_05_00", when="+demo")
+        # External Dependencies not in art-suite
+        depends_on("swig@4.1.1")
+        depends_on("xmlrpc-c@1.51.06 +curl")
+        depends_on("curl@7.76.1")
+        depends_on("qt@5.15.15 +gui+shared")
+        depends_on("librdkafka@2.8.0")
+        depends_on("epics-base@7.0.6.1", when="+epics")
+        depends_on("mongo-cxx-driver@3.10.1 +dots_in_keys", when="+db")
     with when("@v4_04_01"):
         depends_on("trace@v3_20_00")
         depends_on("artdaq-core@v4_03_00")

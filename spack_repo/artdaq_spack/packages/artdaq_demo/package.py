@@ -28,6 +28,7 @@ class ArtdaqDemo(CMakePackage):
     git = "https://github.com/art-daq/artdaq-demo.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v4_05_00", commit="6650f44018cc624675f9104be9cb56b62b3a68d9")
     version("v4_04_00", commit="8a4c861c212340c2e7cf6612e7d56b671d759d24")
     version("v4_03_00", commit="d4b3f968134d3ac1edac51aee0f86db4af5923cb")
     version("v4_02_00", commit="5b9423b5ab10f7e91b91f181a44fb1344f126e2c")
