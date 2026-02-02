@@ -85,7 +85,7 @@ class ArtdaqSuite(BundlePackage):
         # External Dependencies not in art-suite
         depends_on("swig@4.1.1")
         depends_on("xmlrpc-c@1.51.06 +curl")
-        depends_on("curl@7.76.1")
+        depends_on("curl")
         depends_on("qt@5.15.15 +gui+shared")
         depends_on("librdkafka@2.8.0")
         depends_on("epics-base@7.0.6.1", when="+epics")
