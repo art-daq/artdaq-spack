@@ -70,7 +70,7 @@ class ArtSuite(BundlePackage):
 
         depends_on("art@3.15.00 cxxstd=20")
         depends_on("art-root-io@1.14.00 cxxstd=20", when="+root")
-        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
+        depends_on("boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+system+test+thread+timer+wave cxxstd=20") # Sum of all needed libraries...
         depends_on("canvas@3.17.00 cxxstd=20")
         depends_on("canvas-root-io@1.14.00 cxxstd=20", when="+root")
         depends_on("catch2@3.7.1")
