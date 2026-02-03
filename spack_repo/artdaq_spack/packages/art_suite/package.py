@@ -89,7 +89,7 @@ class ArtSuite(BundlePackage):
         depends_on("postgresql@16.4")
         depends_on("py-pybind11@2.13.5")
         # depends_on("pythia6@6.4.28")
-        depends_on("python@3.10.14")
+        depends_on("python@3.10")
         depends_on("range-v3@0.12.0")
         depends_on("root@6.32.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20", when="+root")
         depends_on("sqlite@3.46.0")
