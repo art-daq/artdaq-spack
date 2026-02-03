@@ -44,7 +44,7 @@ class OtsdaqSuite(BundlePackage):
         description="Art suite version to use",
     )
     for squal in squals:
-        depends_on(f"art-suite@s{squal}+root", when=f"s={squal}")
+        depends_on(f"art-suite@s{squal}+root+bundle", when=f"s={squal}")
     depends_on(f"art-suite+root", when="s=0")
 
     variant(
