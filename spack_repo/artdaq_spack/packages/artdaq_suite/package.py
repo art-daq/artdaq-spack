@@ -68,7 +68,7 @@ class ArtdaqSuite(BundlePackage):
         depends_on("swig")
         depends_on("xmlrpc-c +curl")
         depends_on("curl")
-        depends_on("qt +gui+shared")
+        depends_on("qt")
         depends_on("librdkafka")
         depends_on("epics-base", when="+epics")
     with when("@v4_05_00"):
@@ -86,7 +86,7 @@ class ArtdaqSuite(BundlePackage):
         depends_on("swig@4.1.1")
         depends_on("xmlrpc-c@1.51.06 +curl")
         depends_on("curl")
-        depends_on("qt@5.15.15 +gui+shared")
+        depends_on("qt@5.15:")
         depends_on("librdkafka@2.8.0")
         depends_on("epics-base@7.0.6.1", when="+epics")
         depends_on("mongo-cxx-driver@3.10.1 +dots_in_keys", when="+db")
