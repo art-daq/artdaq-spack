@@ -67,6 +67,7 @@ class ArtdaqDatabase(CMakePackage):
     depends_on("art-suite")
     depends_on("fhicl-cpp+db")
 
+    depends_on("libbson", type="build")
     depends_on("mongo-c-driver", type="build")
     depends_on("mongo-cxx-driver+dots_in_keys", type="build")
     depends_on("cetmodules@3.26.00:", type="build")
