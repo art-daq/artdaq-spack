@@ -82,7 +82,7 @@ class ArtSuite(BundlePackage):
         depends_on("fhicl-cpp@4.19.00 cxxstd=20")
         depends_on("gsl@2.8")
         depends_on("hep-concurrency@1.10.00 cxxstd=20")
-        depends_on("libxml2@2.9.13")
+        depends_on("libxml2@2")
         depends_on("messagefacility@2.11.00 cxxstd=20")
         depends_on("py-numpy@2.1.2")
         depends_on("openblas@0.3.28")
