@@ -24,10 +24,11 @@ class ArtdaqCaen(CMakePackage):
     format."""
 
     homepage = "https://cdcvs.fnal.gov/redmine/projects/artdaq/wiki"
-    url = "https://github.com/art-daq/artdaq-caen/archive/refs/tags/v1_00_00.tar.gz"
+    url = "https://github.com/art-daq/artdaq-caen/archive/refs/tags/v1_01_00.tar.gz"
     git = "https://github.com/art-daq/artdaq-caen.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v1_01_00", commit="f2cf35fc187cac2276717336ff4f0777f83a559c")
 
     def url_for_version(self, version):
         url = "https://github.com/art-daq/artdaq-caen/archive/refs/tags/{0}.tar.gz"
