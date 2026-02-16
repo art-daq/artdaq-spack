@@ -88,6 +88,11 @@ class OtsdaqSuite(BundlePackage):
     variant("demo", default=False, description="Install otsdaq-demo")
     variant("prep", default=False, description="Install PREP modernization library")
 
+    variant("ci", default=True, description="Install utilities used by CI builds")
+    with when("+ci"):
+        depends_on("lcov")
+        depends_on("py-black")
+        depends_on("py-cmake-format")
 
     with when("@develop"):
         depends_on("otsdaq")

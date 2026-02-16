@@ -52,6 +52,12 @@ class ArtdaqSuite(BundlePackage):
     variant("epics", default=True, description="Install artdaq EPICS plugin")
     variant("pcp", default=False, description="Install artdaq PCP MMV plugin")
 
+    variant("ci", default=True, description="Install utilities used by CI builds")
+    with when("+ci"):
+        depends_on("lcov")
+        depends_on("py-black")
+        depends_on("py-cmake-format")
+
     with when("@develop"):
         depends_on("trace")
         depends_on("artdaq-core")
