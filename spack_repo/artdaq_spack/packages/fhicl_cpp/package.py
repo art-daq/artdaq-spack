@@ -20,15 +20,42 @@ class FhiclCpp(CMakePackage, FnalGithubPackage):
 
     version_patterns = ["v4_15_03"]
 
-    version("4.19.02", sha256="62a2fa69da52f3d5f00305de00b5c64d0cfd7ba3714cbfc0f016be1e6b82338a")
-    version("4.19.00", sha256="25163d17a9a6c8509d326785a78e399fdc33e231ad393edc0ae34b1d9b56b9f9")
-    version("4.18.04", sha256="d0b8beca890707d0bbf35678c3b6bddd1b02b3ab7654801abbe31525dacdd7b5")
-    version("4.18.03", sha256="c08fd6ce37225e58d3d893f9205b321ae2fff2d8b5c96c2e22ac24708a4309af")
-    version("4.18.02", sha256="ca96ed2f524061b0b9c03aef50d9ef9aad1295d331195e07f7584da7b63ba946")
-    version("4.18.01", sha256="ad99cdf48b912fc51852229e04896c04db6db55a7c49f873156dae6665d8bfa7")
-    version("4.18.00", sha256="cd5c7c0bef5e235264bf22819db283bd3ebfd512ecab06fb3722142cec0a0a5e")
-    version("4.17.00", sha256="07fbba4aed129fcc5edbd9a7304dc3ccd53d2405830779e7c2d71a8b73a99247")
-    version("4.15.03", sha256="99ae2b7557c671d0207dea96529e7c0fca2274974b6609cc7c6bf7e8d04bd12b")
+    version(
+        "4.19.02",
+        sha256="62a2fa69da52f3d5f00305de00b5c64d0cfd7ba3714cbfc0f016be1e6b82338a",
+    )
+    version(
+        "4.19.00",
+        sha256="25163d17a9a6c8509d326785a78e399fdc33e231ad393edc0ae34b1d9b56b9f9",
+    )
+    version(
+        "4.18.04",
+        sha256="d0b8beca890707d0bbf35678c3b6bddd1b02b3ab7654801abbe31525dacdd7b5",
+    )
+    version(
+        "4.18.03",
+        sha256="c08fd6ce37225e58d3d893f9205b321ae2fff2d8b5c96c2e22ac24708a4309af",
+    )
+    version(
+        "4.18.02",
+        sha256="ca96ed2f524061b0b9c03aef50d9ef9aad1295d331195e07f7584da7b63ba946",
+    )
+    version(
+        "4.18.01",
+        sha256="ad99cdf48b912fc51852229e04896c04db6db55a7c49f873156dae6665d8bfa7",
+    )
+    version(
+        "4.18.00",
+        sha256="cd5c7c0bef5e235264bf22819db283bd3ebfd512ecab06fb3722142cec0a0a5e",
+    )
+    version(
+        "4.17.00",
+        sha256="07fbba4aed129fcc5edbd9a7304dc3ccd53d2405830779e7c2d71a8b73a99247",
+    )
+    version(
+        "4.15.03",
+        sha256="99ae2b7557c671d0207dea96529e7c0fca2274974b6609cc7c6bf7e8d04bd12b",
+    )
     version("develop", branch="develop", get_full_repo=True)
 
     cxxstd_variant("17", "20", "23", default="17", sticky=True)
