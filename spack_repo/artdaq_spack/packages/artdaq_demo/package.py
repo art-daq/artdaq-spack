@@ -15,6 +15,7 @@ def sanitize_environments(env, *vars):
         env.prune_duplicate_paths(var)
         env.deprioritize_system_paths(var)
 
+
 class ArtdaqDemo(CMakePackage):
     """The toolkit currently provides functionality for data transfer,
     event building, event reconstruction and analysis (using the art analysis
@@ -57,7 +58,7 @@ class ArtdaqDemo(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v3_12_03"
+        when="@:v3_12_03",
     )
     variant(
         "cxxstd",
@@ -66,7 +67,7 @@ class ArtdaqDemo(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v3_12_04:"
+        when="@v3_12_04:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

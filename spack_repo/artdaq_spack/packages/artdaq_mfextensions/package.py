@@ -15,6 +15,7 @@ def sanitize_environments(env, *vars):
         env.prune_duplicate_paths(var)
         env.deprioritize_system_paths(var)
 
+
 class ArtdaqMfextensions(CMakePackage):
     """The toolkit currently provides functionality for data transfer,
     event building, event reconstruction and analysis (using the art analysis
@@ -52,22 +53,30 @@ class ArtdaqMfextensions(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v1_08_03"
+        when="@:v1_08_03",
     )
     variant(
         "cxxstd",
         default="20",
-        values=( "17","20"),
+        values=("17", "20"),
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v1_08_04:"
+        when="@v1_08_04:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")
 
-    variant("kafka", default=True, description="Build the Kafka destination, which depends on librdkafka")
-    variant("curl", default=True, description="Build the SMTP destination, which depends on libcurl")
+    variant(
+        "kafka",
+        default=True,
+        description="Build the Kafka destination, which depends on librdkafka",
+    )
+    variant(
+        "curl",
+        default=True,
+        description="Build the SMTP destination, which depends on libcurl",
+    )
 
     depends_on("cetmodules@3.26.00:", type="build")
     depends_on("qt@5.15:")
@@ -77,10 +86,13 @@ class ArtdaqMfextensions(CMakePackage):
     depends_on("trace+mf")
     depends_on("art-suite")
 
-    with when('@:v1_08_07'):
+    with when("@:v1_08_07"):
+
         def cmake_args(self):
             args = [
-            self.define_from_variant("CMAKE_CXX_STANDARD", "cxxstd"), self.define('IGNORE_ABSOLUTE_TRANSITIVE_DEPENDENCIES', True) ]
+                self.define_from_variant("CMAKE_CXX_STANDARD", "cxxstd"),
+                self.define("IGNORE_ABSOLUTE_TRANSITIVE_DEPENDENCIES", True),
+            ]
             return args
 
     def cmake_args(self):

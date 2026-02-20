@@ -19,7 +19,9 @@ class OtsdaqComponents(CMakePackage):
     format."""
 
     homepage = "https://cdcvs.fnal.gov/redmine/projects/artdaq/wiki"
-    url = "https://github.com/art-daq/otsdaq-components/archive/refs/tags/v2_06_08.tar.gz"
+    url = (
+        "https://github.com/art-daq/otsdaq-components/archive/refs/tags/v2_06_08.tar.gz"
+    )
     git = "https://github.com/art-daq/otsdaq-components.git"
 
     version("develop", branch="develop", get_full_repo=True)
@@ -51,7 +53,7 @@ class OtsdaqComponents(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v2_06_09"
+        when="@:v2_06_09",
     )
     variant(
         "cxxstd",
@@ -60,7 +62,7 @@ class OtsdaqComponents(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v2_06_10:"
+        when="@v2_06_10:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

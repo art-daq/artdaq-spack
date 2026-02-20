@@ -10,10 +10,9 @@ from spack.package import *
 
 
 class ArtSuite(BundlePackage):
-    """The art suite; art is an event-processing framework for particle physics experiments.
-    """
+    """The art suite; art is an event-processing framework for particle physics experiments."""
 
-    homepage="https://github.com/art-framework-suite/"
+    homepage = "https://github.com/art-framework-suite/"
 
     variant("bundle", default=True, description="specify particular versions by version")
 
@@ -28,7 +27,7 @@ class ArtSuite(BundlePackage):
     version("s122")
     version("s120b")
     version("s120a")
-    #version("s120")
+    # version("s120")
     version("s118")
     version("s117")
     version("s112")
@@ -91,7 +90,10 @@ class ArtSuite(BundlePackage):
         # depends_on("pythia6@6.4.28")
         depends_on("python@3.10")
         depends_on("range-v3@0.12.0")
-        depends_on("root@6.32.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20", when="+root")
+        depends_on(
+            "root@6.32.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20",
+            when="+root",
+        )
         depends_on("sqlite@3.46.0")
         depends_on("tbb@2022.0.0")
         depends_on("xrootd@5.7.1")
@@ -116,12 +118,15 @@ class ArtSuite(BundlePackage):
         depends_on("messagefacility@2.11.00 cxxstd=20")
         depends_on("py-numpy@1.24.3")
         depends_on("openblas@0.3.23")
-        depends_on("postgresql@15.2") # 15.3 not published to Spack
+        depends_on("postgresql@15.2")  # 15.3 not published to Spack
         depends_on("py-pybind11@2.10.4")
         depends_on("pythia6@6.4.28")
         depends_on("python@3")
         depends_on("range-v3@0.12.0")
-        depends_on("root@6.30.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20", when="+root")
+        depends_on(
+            "root@6.30.06 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20",
+            when="+root",
+        )
         depends_on("sqlite@3.40.1")
         depends_on("tbb@2021.9.0")
         depends_on("xrootd@5.5.5")
@@ -146,7 +151,7 @@ class ArtSuite(BundlePackage):
         depends_on("messagefacility@2.10.05 cxxstd=20")
         depends_on("py-numpy@1.24.3")
         depends_on("openblas@0.3.23")
-        depends_on("postgresql@15.2") # 15.3 not published to Spack
+        depends_on("postgresql@15.2")  # 15.3 not published to Spack
         depends_on("py-pybind11@2.10.4")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
@@ -176,7 +181,7 @@ class ArtSuite(BundlePackage):
         depends_on("messagefacility@2.10.05 cxxstd=20")
         depends_on("py-numpy@1.24.3")
         depends_on("openblas@0.3.23")
-        depends_on("postgresql@15.2") # 15.3 not published to Spack
+        depends_on("postgresql@15.2")  # 15.3 not published to Spack
         depends_on("py-pybind11@2.10.4")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
@@ -206,7 +211,7 @@ class ArtSuite(BundlePackage):
         depends_on("messagefacility@2.10.04 cxxstd=20")
         depends_on("py-numpy@1.24.3")
         depends_on("openblas@0.3.23")
-        depends_on("postgresql@15.2") # 15.3 not published to Spack
+        depends_on("postgresql@15.2")  # 15.3 not published to Spack
         depends_on("py-pybind11@2.10.4")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
@@ -236,7 +241,7 @@ class ArtSuite(BundlePackage):
         depends_on("messagefacility@2.10.03 cxxstd=20")
         depends_on("py-numpy@1.24.3")
         depends_on("openblas@0.3.23")
-        depends_on("postgresql@15.2") # 15.3 not published to Spack
+        depends_on("postgresql@15.2")  # 15.3 not published to Spack
         depends_on("py-pybind11@2.10.4")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
@@ -267,7 +272,7 @@ class ArtSuite(BundlePackage):
         depends_on("py-numpy@1.24.1")
         depends_on("openblas@0.3.21")
         depends_on("postgresql@15.1")
-        depends_on("py-pybind11@2.10.1") # 2.10.3 not published to spack
+        depends_on("py-pybind11@2.10.1")  # 2.10.3 not published to spack
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
         depends_on("range-v3@0.12.0 cxxstd=17")
@@ -297,7 +302,7 @@ class ArtSuite(BundlePackage):
         depends_on("py-numpy@1.24.1")
         depends_on("openblas@0.3.21")
         depends_on("postgresql@15.1")
-        depends_on("py-pybind11@2.10.1") # 2.10.3 not published to spack
+        depends_on("py-pybind11@2.10.1")  # 2.10.3 not published to spack
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
         depends_on("range-v3@0.12.0 cxxstd=17")
@@ -327,7 +332,7 @@ class ArtSuite(BundlePackage):
         depends_on("py-numpy@1.24.1")
         depends_on("openblas@0.3.21")
         depends_on("postgresql@15.1")
-        depends_on("py-pybind11@2.10.1") # 2.10.3 not published to spack
+        depends_on("py-pybind11@2.10.1")  # 2.10.3 not published to spack
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.15")
         depends_on("range-v3@0.12.0 cxxstd=17")
@@ -341,7 +346,9 @@ class ArtSuite(BundlePackage):
         depends_on("boost@1.80.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals2+system+test+thread+timer+wave cxxstd=17") # Sum of all needed libraries...
         depends_on("canvas@3.14.01 cxxstd=17")
         depends_on("canvas-root-io@1.11.03 cxxstd=17", when="+root")
-        depends_on("catch2@3.3.1") # 2.13.9 in manifest, but art package has conflicts at 2.12
+        depends_on(
+            "catch2@3.3.1"
+        )  # 2.13.9 in manifest, but art package has conflicts at 2.12
         depends_on("cetlib@3.16.00 cxxstd=17")
         depends_on("cetlib-except@1.08.00 cxxstd=17")
         depends_on("cetmodules@3.24.01")
@@ -468,7 +475,7 @@ class ArtSuite(BundlePackage):
         depends_on("ninja@1.10.2")
         depends_on("py-numpy@1.20.1")
         depends_on("openblas@0.3.13")
-        depends_on("postgresql@14.0") # 13.2 not published to Spack
+        depends_on("postgresql@14.0")  # 13.2 not published to Spack
         depends_on("py-pybind11@2.6.2")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.2")
@@ -486,8 +493,8 @@ class ArtSuite(BundlePackage):
         depends_on("catch2@2.13.4")
         depends_on("cetlib@3.13.04 cxxstd=17")
         depends_on("cetlib-except@1.07.04 cxxstd=17")
-        #depends_on("cetpkgsupport@1.14.01")
-        depends_on("clhep@2.4.5.1 cxxstd=17") # 2.4.4.1 not published to spack
+        # depends_on("cetpkgsupport@1.14.01")
+        depends_on("clhep@2.4.5.1 cxxstd=17")  # 2.4.4.1 not published to spack
         depends_on("fftw@3.3.9")
         depends_on("fhicl-cpp@4.15.03 cxxstd=17")
         depends_on("gsl@2.6")
@@ -499,7 +506,7 @@ class ArtSuite(BundlePackage):
         depends_on("ninja@1.10.2")
         depends_on("py-numpy@1.20.1")
         depends_on("openblas@0.3.13")
-        depends_on("postgresql@14.0") # 13.2 not published to Spack
+        depends_on("postgresql@14.0")  # 13.2 not published to Spack
         depends_on("py-pybind11@2.6.2")
         depends_on("pythia6@6.4.28")
         depends_on("python@3.9.2")

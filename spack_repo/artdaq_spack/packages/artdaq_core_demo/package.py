@@ -9,10 +9,12 @@ import sys
 from spack_repo.builtin.build_systems.cmake import CMakePackage
 from spack.package import *
 
+
 def sanitize_environments(env, *vars):
     for var in vars:
         env.prune_duplicate_paths(var)
         env.deprioritize_system_paths(var)
+
 
 class ArtdaqCoreDemo(CMakePackage):
     """The toolkit currently provides functionality for data transfer,
@@ -23,7 +25,9 @@ class ArtdaqCoreDemo(CMakePackage):
     format."""
 
     homepage = "https://cdcvs.fnal.gov/redmine/projects/artdaq/wiki"
-    url = "https://github.com/art-daq/artdaq-core-demo/archive/refs/tags/v1_10_02.tar.gz"
+    url = (
+        "https://github.com/art-daq/artdaq-core-demo/archive/refs/tags/v1_10_02.tar.gz"
+    )
     git = "https://github.com/art-daq/artdaq-core-demo.git"
 
     version("develop", branch="develop", get_full_repo=True)
@@ -51,7 +55,7 @@ class ArtdaqCoreDemo(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v1_10_03"
+        when="@:v1_10_03",
     )
     variant(
         "cxxstd",
@@ -60,7 +64,7 @@ class ArtdaqCoreDemo(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v1_10_04:"
+        when="@v1_10_04:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

@@ -50,7 +50,7 @@ class OtsdaqEpics(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v2_06_09"
+        when="@:v2_06_09",
     )
     variant(
         "cxxstd",
@@ -59,7 +59,7 @@ class OtsdaqEpics(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v2_06_10:"
+        when="@v2_06_10:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

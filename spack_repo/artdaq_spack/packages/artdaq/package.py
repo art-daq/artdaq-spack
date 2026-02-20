@@ -29,7 +29,6 @@ class Artdaq(CMakePackage):
     url = "https://github.com/art-daq/artdaq/archive/refs/tags/v3_12_04.tar.gz"
     git = "https://github.com/art-daq/artdaq.git"
 
-
     version("develop", branch="develop", get_full_repo=True)
     version("v4_05_00", commit="3dc9f1d8a414cf8a0f0268d7a47d74963671e40c")
     version("v4_04_01", commit="b17c846d9ca5d6f5711e44f35da4853e2e8baa01")
@@ -62,7 +61,7 @@ class Artdaq(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v3_12_03"
+        when="@:v3_12_03",
     )
     variant(
         "cxxstd",
@@ -71,7 +70,7 @@ class Artdaq(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v3_12_04:"
+        when="@v3_12_04:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

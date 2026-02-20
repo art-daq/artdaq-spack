@@ -53,9 +53,9 @@ class ArtdaqDaqinterface(CMakePackage):
     def setup_run_environment(self, env):
         prefix = self.prefix
         env.set("ARTDAQ_DAQINTERFACE_DIR", prefix)
-        env.set("ARTDAQ_DAQINTERFACE_VERSION", "SPACK") # Needed by source_me
+        env.set("ARTDAQ_DAQINTERFACE_VERSION", "SPACK")  # Needed by source_me
 
     def setup_dependent_run_environment(self, env, dependent_spec):
         prefix = self.prefix
         env.set("ARTDAQ_DAQINTERFACE_DIR", prefix)
-        env.set("ARTDAQ_DAQINTERFACE_VERSION", "SPACK") # Needed by source_me
+        env.set("ARTDAQ_DAQINTERFACE_VERSION", "SPACK")  # Needed by source_me

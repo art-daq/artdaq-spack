@@ -19,7 +19,9 @@ class OtsdaqUtilities(CMakePackage):
     format."""
 
     homepage = "https://cdcvs.fnal.gov/redmine/projects/artdaq/wiki"
-    url = "https://github.com/art-daq/otsdaq-utilities/archive/refs/tags/v2_06_08.tar.gz"
+    url = (
+        "https://github.com/art-daq/otsdaq-utilities/archive/refs/tags/v2_06_08.tar.gz"
+    )
     git = "https://github.com/art-daq/otsdaq-utilities.git"
 
     version("develop", branch="develop", get_full_repo=True, submodules=True)
@@ -54,7 +56,7 @@ class OtsdaqUtilities(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v2_06_09"
+        when="@:v2_06_09",
     )
     variant(
         "cxxstd",
@@ -63,7 +65,7 @@ class OtsdaqUtilities(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v2_06_10:"
+        when="@v2_06_10:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")
@@ -74,8 +76,8 @@ class OtsdaqUtilities(CMakePackage):
     depends_on("otsdaq@v3_00_00:,develop", when="@v3_00_00:,develop")
     depends_on("artdaq-suite")
 
-#    depends_on("xsd") #for ECLWriter
-    depends_on("curl") #for ECLWriter
+    #    depends_on("xsd") #for ECLWriter
+    depends_on("curl")  # for ECLWriter
 
     def cmake_args(self):
         args = [
@@ -86,7 +88,6 @@ class OtsdaqUtilities(CMakePackage):
         else:
             self.define("artdaq_core_OLD_STYLE_CONFIG_VARS", True)
         return args
-
 
     def setup_run_environment(self, env):
         prefix = self.prefix

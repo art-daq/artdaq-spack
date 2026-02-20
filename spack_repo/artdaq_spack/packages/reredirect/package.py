@@ -15,8 +15,9 @@ class Reredirect(MakefilePackage):
 
     license("mit", checked_by="eflumerf")
 
-    version("0.3", sha256="ec01398ee442ff1223bcad608811b8cae2d116a1e519e2dc40fe48a4a6220e91")
-
+    version(
+        "0.3", sha256="ec01398ee442ff1223bcad608811b8cae2d116a1e519e2dc40fe48a4a6220e91"
+    )
 
     def edit(self, spec, prefix):
         makefile = FileFilter("Makefile")

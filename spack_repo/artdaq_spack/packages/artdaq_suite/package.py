@@ -12,7 +12,7 @@ from spack.package import *
 class ArtdaqSuite(BundlePackage):
     """The artdaq suite; artdaq is a data acquisition framework that leverages the analysis capabilities of art"""
 
-    homepage="https://github.com/art-daq"
+    homepage = "https://github.com/art-daq"
 
     version("develop")
     version("v4_05_00")
@@ -35,7 +35,23 @@ class ArtdaqSuite(BundlePackage):
     version("v3_12_03")
     version("v3_12_02")
 
-    squals = ("112", "117", "118", "120", "120a", "120b", "122", "123", "124", "126", "128", "130", "131", "132", "133")
+    squals = (
+        "112",
+        "117",
+        "118",
+        "120",
+        "120a",
+        "120b",
+        "122",
+        "123",
+        "124",
+        "126",
+        "128",
+        "130",
+        "131",
+        "132",
+        "133",
+    )
     variant(
         "s",
         default="133",

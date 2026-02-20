@@ -16,7 +16,6 @@ def sanitize_environments(env, *vars):
         env.deprioritize_system_paths(var)
 
 
-
 class OtsdaqPrepmodernization(CMakePackage):
     """The toolkit currently provides functionality for data transfer,
     event building, event reconstruction and analysis (using the art analysis
@@ -56,7 +55,7 @@ class OtsdaqPrepmodernization(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v2_06_09"
+        when="@:v2_06_09",
     )
     variant(
         "cxxstd",
@@ -65,7 +64,7 @@ class OtsdaqPrepmodernization(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v2_06_10:"
+        when="@v2_06_10:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")

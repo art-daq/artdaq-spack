@@ -9,9 +9,9 @@ from sys import version
 from spack_repo.builtin.build_systems.bundle import BundlePackage
 from spack.package import *
 
+
 class OtsdaqSuite(BundlePackage):
-    """The Off-The-Shelf DAQ suite, otsdaq, providing graphical wrappers for artdaq
-    """
+    """The Off-The-Shelf DAQ suite, otsdaq, providing graphical wrappers for artdaq"""
 
     version("develop")
     version("v3_05_01")
@@ -36,7 +36,23 @@ class OtsdaqSuite(BundlePackage):
     version("v2_06_09")
     version("v2_06_08")
 
-    squals = ("112", "117", "118", "120", "120a", "120b", "122", "123", "124", "126", "128", "130", "131", "132", "133")
+    squals = (
+        "112",
+        "117",
+        "118",
+        "120",
+        "120a",
+        "120b",
+        "122",
+        "123",
+        "124",
+        "126",
+        "128",
+        "130",
+        "131",
+        "132",
+        "133",
+    )
     variant(
         "s",
         default="133",
@@ -51,18 +67,41 @@ class OtsdaqSuite(BundlePackage):
     variant(
         "artdaq",
         default="31600",
-        values = ("0","31202","31203","31204", "31205", "31207", "31300", "31301", "31400", "31401", "31500", "31600"),
+        values=(
+            "0",
+            "31202",
+            "31203",
+            "31204",
+            "31205",
+            "31207",
+            "31300",
+            "31301",
+            "31400",
+            "31401",
+            "31500",
+            "31600",
+        ),
         multi=False,
         description="Artdaq suite version to use",
-        when="@:v3_00_00"
+        when="@:v3_00_00",
     )
     variant(
         "artdaq",
         default="40500",
-        values = ("0","40000","40100","40200", "40300", "40301", "40400", "40401", "40500"),
+        values=(
+            "0",
+            "40000",
+            "40100",
+            "40200",
+            "40300",
+            "40301",
+            "40400",
+            "40401",
+            "40500",
+        ),
         multi=False,
         description="Artdaq suite version to use",
-        when="@v3_00_00:"
+        when="@v3_00_00:",
     )
 
     depends_on("artdaq-suite@v4_05_00", when="artdaq=40500")

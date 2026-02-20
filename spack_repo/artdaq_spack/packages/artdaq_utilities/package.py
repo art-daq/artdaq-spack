@@ -15,6 +15,7 @@ def sanitize_environments(env, *vars):
         env.prune_duplicate_paths(var)
         env.deprioritize_system_paths(var)
 
+
 class ArtdaqUtilities(CMakePackage):
     """The toolkit currently provides functionality for data transfer,
     event building, event reconstruction and analysis (using the art analysis
@@ -24,7 +25,9 @@ class ArtdaqUtilities(CMakePackage):
     format."""
 
     homepage = "https://cdcvs.fnal.gov/redmine/projects/artdaq/wiki"
-    url = "https://github.com/art-daq/artdaq-utilities/archive/refs/tags/v1_08_02.tar.gz"
+    url = (
+        "https://github.com/art-daq/artdaq-utilities/archive/refs/tags/v1_08_02.tar.gz"
+    )
     git = "https://github.com/art-daq/artdaq-utilities.git"
 
     version("develop", branch="develop", get_full_repo=True)
@@ -52,7 +55,7 @@ class ArtdaqUtilities(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@:v1_08_03"
+        when="@:v1_08_03",
     )
     variant(
         "cxxstd",
@@ -61,7 +64,7 @@ class ArtdaqUtilities(CMakePackage):
         multi=False,
         sticky=True,
         description="Use the specified C++ standard when building.",
-        when="@v1_08_04:"
+        when="@v1_08_04:",
     )
     depends_on("c", type="build")
     depends_on("cxx", type="build")
