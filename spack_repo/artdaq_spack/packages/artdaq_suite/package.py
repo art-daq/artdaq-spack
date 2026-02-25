@@ -67,6 +67,7 @@ class ArtdaqSuite(BundlePackage):
     variant("db", default=True, description="Install artdaq_database")
     variant("epics", default=True, description="Install artdaq EPICS plugin")
     variant("pcp", default=False, description="Install artdaq PCP MMV plugin")
+    variant("caen", default=False, description="Install artdaq CAEN plugin")
 
     variant("ci", default=True, description="Install utilities used by CI builds")
     with when("+ci"):
@@ -85,6 +86,7 @@ class ArtdaqSuite(BundlePackage):
         depends_on("artdaq-core-demo", when="+demo")
         depends_on("artdaq-database", when="+db")
         depends_on("artdaq-demo", when="+demo")
+        depends_on("artdaq-caen", when="+caen")
 
         # External Dependencies not in art-suite
         depends_on("swig")
@@ -104,6 +106,7 @@ class ArtdaqSuite(BundlePackage):
         depends_on("artdaq-core-demo@v2_03_00", when="+demo")
         depends_on("artdaq-database@v3_01_00", when="+db")
         depends_on("artdaq-demo@v4_05_00", when="+demo")
+        depends_on("artdaq-caen@v1_01_00", when="+caen")
         # External Dependencies not in art-suite
         depends_on("swig@4.1.1")
         depends_on("xmlrpc-c@1.51.06 +curl")
