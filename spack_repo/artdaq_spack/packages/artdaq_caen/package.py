@@ -46,7 +46,7 @@ class ArtdaqCaen(CMakePackage):
 
     depends_on("cetmodules@3.26.00:", type="build")
 
-    depends_on("artdaq@v4_00_00:,develop", when="@v4_00_00:,develop")
+    depends_on("artdaq@v4_00_00:,develop", when="@v1_00_00:,develop")
     depends_on("art-suite")
 
     depends_on("caencomm")
