@@ -44,6 +44,8 @@ class ArtdaqCaen(CMakePackage):
         sticky=True,
         description="Use the specified C++ standard when building.",
     )
+    depends_on("c", type="build")
+    depends_on("cxx", type="build")
 
     depends_on("cetmodules@3.26.00:", type="build")
 
