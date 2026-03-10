@@ -29,6 +29,7 @@ class ArtdaqCaen(CMakePackage):
     git = "https://github.com/art-daq/artdaq-caen.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v1_02_00", commit="891cd42e132109665d6861b6c16b6f5307086e5b")
     version("v1_01_00", commit="f2cf35fc187cac2276717336ff4f0777f83a559c")
 
     def url_for_version(self, version):
