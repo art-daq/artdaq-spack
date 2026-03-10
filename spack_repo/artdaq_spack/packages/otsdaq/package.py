@@ -81,7 +81,7 @@ class Otsdaq(CMakePackage):
     depends_on("xdaq")
     depends_on("reredirect", when="@v2_09_00:")
     depends_on("py-rich-click", when="@v3:")
-    depends_on("cppzmq", type="build")
+    depends_on("cppzmq")
 
     depends_on("artdaq@:v3_99_00", when="@:v2_99_00")
     depends_on("artdaq@v4_00_00:,develop", when="@v3_00_00:,develop")

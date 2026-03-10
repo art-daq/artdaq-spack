@@ -80,6 +80,7 @@ class OtsdaqUtilities(CMakePackage):
     #    depends_on("xsd") #for ECLWriter
     depends_on("curl")  # for ECLWriter
     depends_on("py-slack-sdk")  # For ChatSupervisor
+    depends_on("cppzmq")
 
     def cmake_args(self):
         args = [
