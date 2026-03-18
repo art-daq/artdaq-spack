@@ -80,7 +80,7 @@ class ArtdaqMfextensions(CMakePackage):
     )
 
     depends_on("cetmodules@3.26.00:", type="build")
-    depends_on("qt@5.15:")
+    depends_on("qt@5.15:+gui")
     depends_on("librdkafka", when="+kafka")
     depends_on("curl", when="+curl")
 
