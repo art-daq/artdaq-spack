@@ -112,7 +112,7 @@ class OtsdaqSuite(BundlePackage):
     with when("@v3_07_00"):
         depends_on("otsdaq@v3_07_00")
         depends_on("otsdaq-utilities@v3_06_00")
-        depends_on("otsdaq-components@v3_03_01")
+        depends_on("otsdaq-components@v3_04_00")
         depends_on("otsdaq-epics@v3_04_00")
         depends_on("otsdaq-demo@v3_07_00", when="+demo")
         depends_on("otsdaq-prepmodernization@v3_03_00", when="+prep")
