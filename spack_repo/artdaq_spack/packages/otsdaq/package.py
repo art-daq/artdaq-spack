@@ -29,6 +29,7 @@ class Otsdaq(CMakePackage):
     git = "https://github.com/art-daq/otsdaq.git"
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v3_08_00", commit="6f4003be55e36f64f3c5aaf0e5514eb64088fe1f")
     version("v3_07_00", commit="3f776014b465c8ac881e77eb23c203a814a068db")
     version("v3_06_00", commit="467774e8485c78d49cb0127e3ef56835f34c6a95")
     version("v3_05_01", commit="ecd7b2381420d715f5afe501c9063604c0e3ed46")
