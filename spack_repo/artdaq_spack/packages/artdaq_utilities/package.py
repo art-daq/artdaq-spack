@@ -76,6 +76,8 @@ class ArtdaqUtilities(CMakePackage):
     depends_on("art-suite")
 
     depends_on("trace+mf")
+    depends_on("py-plotly", type="run")
+    depends_on("py-plotext", type="run")
 
     def cmake_args(self):
         args = [
