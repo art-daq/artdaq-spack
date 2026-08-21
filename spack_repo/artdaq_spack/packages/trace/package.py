@@ -31,6 +31,7 @@ class Trace(CMakePackage):
     depends_on("cetmodules@3.26.00:", type="build")
 
     version("develop", branch="develop", get_full_repo=True)
+    version("v3_25_00", commit="930abe14a33a7c2dbd172217f135ca429cea1cae")
     version("v3_24_00", commit="6add133be9b6b1dbdbca92c4d1f8eda7066e6ca8")
     version("v3_23_00", commit="61b5209043144a1f514ff0e85fafd2c0a3db4cb3")
     version("v3_22_00", commit="38164de32aa979f27a1d88b5ce64caed84d06b59")
