@@ -48,8 +48,11 @@ class ArtdaqDaqinterface(CMakePackage):
     version("v3_12_03", commit="cd909f5c12191d63f2894287a67a2fd8c5854945")
     version("v3_12_02", commit="d3f787e238ab5c17a84a14465aa997e3eb3f4268")
 
+    variant("db", default=False, description="Enable database support")
+
     depends_on("cetmodules@3.26.00:", type="build")
     depends_on("python@3:")
+    depends_on("py-psycopg2", sticky=True, when="+db")
 
     def setup_run_environment(self, env):
         prefix = self.prefix
