@@ -56,7 +56,7 @@ class ArtdaqDaqinterface(CMakePackage):
 
     depends_on("cetmodules@3.26.00:", type="build")
     depends_on("python@3:")
-    depends_on("py-psycopg2", sticky=True, when="+db")
+    depends_on("py-psycopg2", when="+db")
 
     def setup_run_environment(self, env):
         prefix = self.prefix
