@@ -56,10 +56,11 @@ class ArtdaqSuite(BundlePackage):
         "132",
         "133",
         "134",
+        "135",
     )
     variant(
         "s",
-        default="134",
+        default="135",
         values=("0",) + squals,
         multi=False,
         description="Art suite version to use",
