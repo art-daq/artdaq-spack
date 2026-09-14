@@ -59,9 +59,14 @@ class PyPsycopg2(PythonPackage):
     # https://github.com/psycopg/psycopg2/blob/master/doc/src/install.rst
     # https://www.psycopg.org/docs/news.html#news
     # https://pypi.org/project/psycopg2/#history
-    depends_on("python@:3.11", when="@2.9.5:", type=("build", "link", "run"))
-    depends_on("python@:3.10", when="@2.9.1:", type=("build", "link", "run"))
-    depends_on("python@:3.9", when="@2.8.6:2.9.13", type=("build", "link", "run"))
+    depends_on("python@3", type=("build", "link", "run"))
+    depends_on("python@3.10:3.15", when="@2.9.13")
+    depends_on("python@3.9:3.14", when="@2.9.11:2.9.13")
+    depends_on("python@3.8:3.13", when="@2.9.10")
+    depends_on("python@3.7:3.12", when="@2.9.9")
+    depends_on("python@3.6:3.11", when="@2.9.5:2.9.9")
+    depends_on("python@3.6:3.10", when="@2.9.1:2.9.5")
+    depends_on("python@3.6:3.9", when="@2.8.6:2.9.1")
 
     depends_on("py-setuptools", type="build")
 
