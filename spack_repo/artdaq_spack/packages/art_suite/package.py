@@ -76,7 +76,7 @@ class ArtSuite(BundlePackage):
         depends_on("art@3.15.00 cxxstd=20")
         depends_on("art-root-io@1.14.01 cxxstd=20", when="+root")
         depends_on(
-            "boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+signals+system+test+thread+timer+wave cxxstd=20"
+            "boost@1.82.0+atomic+chrono+date_time+exception+filesystem+graph+iostreams+json+locale+log+math+multithreaded+program_options+random+regex+serialization+shared+system+test+thread+timer+wave cxxstd=20"
         )  # Sum of all needed libraries...
         depends_on("canvas@3.17.00 cxxstd=20")
         depends_on("canvas-root-io@1.14.01 cxxstd=20", when="+root")
@@ -89,14 +89,14 @@ class ArtSuite(BundlePackage):
         depends_on("fhicl-cpp@4.19.02 cxxstd=20")
         depends_on("gsl@2.8")
         depends_on("hep-concurrency@1.10.00 cxxstd=20")
-        depends_on("libxml2@2.9.13")
+        depends_on("libxml2@2.11.9") # 2.9.13 no longer available in spack-packages
         depends_on("messagefacility@2.11.00 cxxstd=20")
         depends_on("py-numpy@2.1.2")
         depends_on("openblas@0.3.28")
         depends_on("postgresql@16.4")
         depends_on("py-pybind11@2.13.5")
         # depends_on("pythia6@6.4.28")
-        depends_on("python@3.10.14")
+        depends_on("python@3.10.16") # 3.10.14 no longer available in spack-packages
         depends_on("range-v3@0.12.0")
         depends_on(
             "root@6.38.00 +http+mlp+root7+spectrum+tmva+tmva-sofie cxxstd=20",
